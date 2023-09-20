@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/memo_app.dart';
 import 'package:storybook_flutter/storybook_flutter.dart';
 //import 'package:storybook_flutter_example/router_aware_stories.dart';
 
@@ -9,9 +10,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Storybook(
-        initialStory: 'Screens/Scaffold',
+        initialStory: 'MemoApp',
         stories: [
           //...routerAwareStories,
+          Story(name: 'MemoApp', builder: (context)=>MemoApp()),
           Story(
             name: 'Screens/Scaffold',
             description: 'Story with scaffold and different knobs.',
