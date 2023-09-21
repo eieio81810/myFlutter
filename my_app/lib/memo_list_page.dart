@@ -26,7 +26,7 @@ class MemoListPageState extends State<MemoListPage> {
   void init() async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
-      memoList = prefs.getStringList("memoList")??List.empty(); // リストが1個もない時、空のリスト入れる
+      memoList = prefs.getStringList("memoList")??[]; // リストが1個もない時、空のリスト入れる
     });
   }
 
