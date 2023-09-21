@@ -19,7 +19,7 @@ class MemoAddPageState extends State<MemoAddPage> {
       appBar: AppBar(
         title: const Text("MemoAdd"),
       ),
-      body: Container(
+      body: SingleChildScrollView(child: Container(
         // 余白を付ける
         padding: const EdgeInsets.all(64),
         child: Column(
@@ -69,7 +69,7 @@ class MemoAddPageState extends State<MemoAddPage> {
             ),
           ],
         ),
-      ),
+      ),),
     );
   }
 }

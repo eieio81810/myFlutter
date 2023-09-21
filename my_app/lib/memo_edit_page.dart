@@ -32,7 +32,7 @@ class MemoEditPageState extends State<MemoEditPage> {
       appBar: AppBar(
         title: const Text('MemoEdit'),
       ),
-      body: Container(
+      body: SingleChildScrollView(child:Container(
         // 余白を付ける
         padding: const EdgeInsets.all(64),
         child: Column(
@@ -49,6 +49,7 @@ class MemoEditPageState extends State<MemoEditPage> {
                 // データを変更したことを知らせる(画面を更新する)
                 setState(() {
                   // データを変更
+                  controller.text = value;
                   _text = value;
                 });
               },
@@ -83,7 +84,7 @@ class MemoEditPageState extends State<MemoEditPage> {
             ),
           ],
         ),
-      ),
+      ),),
     );
   }
 }
